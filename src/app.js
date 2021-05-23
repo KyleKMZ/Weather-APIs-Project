@@ -18,11 +18,15 @@ server.set('views', viewsPath)
 
 
 server.get('', (req, res) => {
+    res.render('index', {
 
+    })
 })
 
 server.get('/about.html', (req, res) => {
-    
+    res.render('about', {
+
+    })
 })
 
 server.get('/weather', (req, res) => {
@@ -40,6 +44,10 @@ server.get('/weather', (req, res) => {
     //         console.log(forecastData)
     //     })
     // })
+})
+
+server.listen(port, () => {
+    console.log('Server started at port: ' + port)
 })
 
 
