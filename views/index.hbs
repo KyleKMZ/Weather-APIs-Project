@@ -19,4 +19,46 @@
         <button>Search Location</button>
     </form>
 
+    <div class="main-content">
+
+        <p>Location: {{location}}</p>
+
+        <div class="weather_description">
+            <p>Description: {{description}}</p>
+        </div>
+
+        <div class="temperatures">
+            <div class="fahrenheit">
+                <p>Temperature in Fahrenheit: </p>
+                <p>{{fahrenheit_temp}}</p>
+                <p>but feels like... {{fahrenheit_feels}}</p>
+            </div>
+            <div class="celsius">
+                <p>Temperature in Celsius: </p>
+                <p>{{celsius_temp}}</p>
+                <p>but feels like... {{celsius_feels}}</p>
+            </div>
+            <div class="kelvin">
+                <p>Temperature in Kelvin: </p>
+                <p>{{kelvin_temp}}</p>
+                <p>but feels like... {{kelvin_feels}}</p>
+            </div>
+        </div>
+
+        <div class="atmosphere_wind">
+            
+            <div class="atmosphere">
+                <p>Humidity: {{humidity}}</p>
+                <p>Precipitation: {{precipitation}}</p>
+                <p>Pressure: {{pressure}}</p>
+            </div>
+            
+            <div class="wind">
+                <p>Wind Speed: {{w_speed}}</p>
+                <p>Wind Degree: {{w_degree}}</p>
+                <p>Wind Direction: {{w_direction}}</p>
+            </div>
+        </div>
+    </div>
+
 </body>
