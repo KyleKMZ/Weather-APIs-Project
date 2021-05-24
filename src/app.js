@@ -19,7 +19,7 @@ server.set('views', viewsPath)
 
 server.get('', (req, res) => {
     res.render('index', {
-
+        
     })
 })
 
@@ -30,20 +30,40 @@ server.get('/about.html', (req, res) => {
 })
 
 server.get('/weather', (req, res) => {
-    // Need to rewrite this after frontend is done
-    // geocode(location, (error, {latitude, longitude, location} = {}) => {
-    //     if (error) {
-    //         return console.log(error)
-    //     } 
-    //     forecast(latitude, longitude, (error, forecastData) => {
-    //         if (error) {
-    //             return console.log(error)
-    //         }
+
+    if (!req.query.address) {
+        return res.send({
+            error: 'Please provide a location.'
+        })
+    }
+
+    geocode(req.query.address, (error, {latitude, longitude, location} = {}) => {
+        if (error) {
+            return res.send({ error })
+        } 
+        forecast(latitude, longitude, (error, api_data) => {
+            if (error) {
+                return res.send({ error })
+            }
     
-    //         console.log(location)
-    //         console.log(forecastData)
-    //     })
-    // })
+            res.send({
+                location_data: location,
+                description: api_data.description,
+                fahrenheit_temp: api_data.fahrenheit_temp,
+                fahrenheit_feels: api_data.fahrenheit_feels,
+                celsius_temp: api_data.celsius_temp,
+                celsius_feels: api_data.celsius_feels,
+                kelvin_temp: api_data.kelvin_temp,
+                kelvin_feels: api_data.kelvin_feels,
+                humidity: api_data.humidity,
+                precipitation: api_data.precipitation,
+                pressure: api_data.pressure,
+                w_speed: api_data.w_speed,
+                w_degree: api_data.w_degree,
+                w_direction: api_data.w_direction
+            })
+        })
+    })
 })
 
 server.listen(port, () => {

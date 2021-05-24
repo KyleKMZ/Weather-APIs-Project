@@ -21,44 +21,46 @@
 
     <div class="main-content">
 
-        <p>Location: {{location}}</p>
+        <p id='location'>Location: </p>
 
         <div class="weather_description">
-            <p>Description: {{description}}</p>
+            <p id="description">Description: </p>
         </div>
 
         <div class="temperatures">
             <div class="fahrenheit">
                 <p>Temperature in Fahrenheit: </p>
-                <p>{{fahrenheit_temp}}</p>
-                <p>but feels like... {{fahrenheit_feels}}</p>
+                <p id="fahrenheit_temp">0F</p>
+                <p id="fahrenheit_feels">but feels like 0F</p>
             </div>
             <div class="celsius">
                 <p>Temperature in Celsius: </p>
-                <p>{{celsius_temp}}</p>
-                <p>but feels like... {{celsius_feels}}</p>
+                <p id="celsius_temp">0C</p>
+                <p id="celsius_feels">but feels like 0C</p>
             </div>
             <div class="kelvin">
                 <p>Temperature in Kelvin: </p>
-                <p>{{kelvin_temp}}</p>
-                <p>but feels like... {{kelvin_feels}}</p>
+                <p id="kelvin_temp">0K</p>
+                <p id="kelvin_feels">but feels like 0K</p>
             </div>
         </div>
 
         <div class="atmosphere_wind">
             
             <div class="atmosphere">
-                <p>Humidity: {{humidity}}</p>
-                <p>Precipitation: {{precipitation}}</p>
-                <p>Pressure: {{pressure}}</p>
+                <p id="humidity">Humidity: 0</p>
+                <p id="precipitation">Precipitation: 0</p>
+                <p id="pressure">Pressure: 0</p>
             </div>
             
             <div class="wind">
-                <p>Wind Speed: {{w_speed}}</p>
-                <p>Wind Degree: {{w_degree}}</p>
-                <p>Wind Direction: {{w_direction}}</p>
+                <p id="w_speed">Wind Speed: 0</p>
+                <p id="w_degree">Wind Degree: 0</p>
+                <p id="w_direction">Wind Direction: 0</p>
             </div>
         </div>
     </div>
+
+    <script src="/js/app.js"></script>
 
 </body>

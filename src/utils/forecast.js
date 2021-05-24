@@ -8,10 +8,39 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback('Forecast: Location Not Found!', undefined)
         } else {
-            const temperature = body.current.temperature 
-            const feelslike = body.current.feelslike
+            // const temperature = body.current.temperature 
+            // const feelslike = body.current.feelslike
+            // const description = body.current.weather_descriptions[0]
+
             const description = body.current.weather_descriptions[0]
-            callback(undefined, description + ' throughout the day. The temperatue is ' + temperature + ' and feels like ' + feelslike + '.')
+            const fahrenheit_temp = body.current.temperature
+            const fahrenheit_feels = body.current.feelslike
+            const celsius_temp = (fahrenheit_temp - 32) * (5/9)
+            const celsius_feels = (fahrenheit_feels - 32) * (5/9)
+            const kelvin_temp = celsius_temp + 273.15
+            const kelvin_feels = celsius_feels + 273.15
+            const humidity = body.current.humidity
+            const precipitation = body.current.precip
+            const pressure = body.current.pressure
+            const w_speed = body.current.wind_speed
+            const w_degree = body.current.wind_degree
+            const w_direction = body.current.wind_dir
+
+            callback(undefined, {
+                description: description,
+                fahrenheit_temp: fahrenheit_temp,
+                fahrenheit_feels: fahrenheit_feels,
+                celsius_temp: celsius_temp,
+                celsius_feels: celsius_feels,
+                kelvin_temp: kelvin_temp,
+                kelvin_feels: kelvin_feels,
+                humidity: humidity,
+                precipitation: precipitation,
+                pressure: pressure,
+                w_speed: w_speed,
+                w_degree: w_degree,
+                w_direction: w_direction
+            })
         }
     })
     
