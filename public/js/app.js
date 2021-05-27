@@ -19,6 +19,7 @@ const w_direction = document.querySelector('#w_direction')
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
 
+    loading_error.style.visibility = 'visible'
     loading_error.textContent = 'Loading...'
     const searchTerm = search.value
     fetch('/weather?address=' + searchTerm).then((response) => {
@@ -40,8 +41,7 @@ weatherForm.addEventListener('submit', (e) => {
                 w_speed.textContent = 'Wind Speed: ' + data.w_speed
                 w_degree.textContent = 'Wind Degree: ' + data.w_degree
                 w_direction.textContent = 'Wind Direction: ' + data.w_direction
-                console.log('Done updating')
-                loading_error.textContent = ''
+                loading_error.style.visibility = 'hidden'
             }
         })
     })
