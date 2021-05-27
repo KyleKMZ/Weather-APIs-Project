@@ -13,21 +13,24 @@ a {
     border-radius: 10px;
     margin-left: 80px;
     margin-right: 80px;
-    font-size: 14px;
     border-bottom: 1px solid black;
+    font-family: 'Alegreya', serif;
+    font-size: 18px;
 }
 
 h1 {
     text-align: center;
     font-size: 36px;
     margin-top: 40px;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 h2 {
     text-align: center;
-    font-size: 22px;
+    font-size: 18px;
     font-style: italic;
     font-weight: 100;
+    font-family: 'Comfortaa', cursive;
 }
 
 form {
@@ -43,12 +46,14 @@ input {
     border-radius: 10px;
     font-size: 20px;
     padding: 5px;
+    font-family: 'Alegreya', serif;
 }
 
 button {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     padding: 5px;
+    font-family: 'Alegreya', serif;
 }
 
 #loading-error {
@@ -76,6 +81,13 @@ button {
 #location, #description {
     font-size: 20px;
     text-align: center;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+#temp_title {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
 }
 
 .temperatures {
@@ -95,18 +107,24 @@ button {
 
 #fahrenheit_temp, #celsius_temp, #kelvin_temp {
     font-size: 28px;
-    font-weight: bold;
+    font-family: 'Comfortaa', sans-serif;
 }
 
 #fahrenheit_feels, #celsius_feels, #kelvin_feels {
     font-size: 18px;
     font-weight: lighter;
     font-style: italic;
+    font-family: 'Comfortaa', sans-serif;
+
+}
+
+.atmosphere_wind {
+    margin-bottom: 40px;
 }
 
 .atmosphere, .wind {
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 90px;
+    margin-right: 90px;
 }
 
 #humidity, #precipitation, #pressure, #w_speed, #w_degree, #w_direction {
@@ -114,4 +132,6 @@ button {
     border-bottom: 2px solid black;
     border-radius: 10px;
     padding: 10px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 18px;
 }

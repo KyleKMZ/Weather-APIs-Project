@@ -3,6 +3,12 @@
 <head>
     <title>Simple Weather</title>
     <link rel="stylesheet" href="/css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -12,7 +18,7 @@
     </header>
 
     <h1>SIMPLE WEATHER</h1>
-    <h2>a simple weather forecasting app built with the Mapbox and WeatherStack APIs</h2>
+    <h2>a simple weather information app built with the Mapbox and WeatherStack APIs</h2>
 
     <form>
         <input placeholder="Enter location...">
@@ -31,17 +37,17 @@
 
         <div class="temperatures">
             <div class="temp_box">
-                <p>Temperature in Fahrenheit </p>
+                <p id="temp_title">Temperature in Fahrenheit </p>
                 <p id="fahrenheit_temp">0F</p>
                 <p id="fahrenheit_feels">but feels like 0F</p>
             </div>
             <div class="temp_box">
-                <p>Temperature in Celsius </p>
+                <p id="temp_title">Temperature in Celsius </p>
                 <p id="celsius_temp">0C</p>
                 <p id="celsius_feels">but feels like 0C</p>
             </div>
             <div class="temp_box">
-                <p>Temperature in Kelvin </p>
+                <p id="temp_title">Temperature in Kelvin </p>
                 <p id="kelvin_temp">0K</p>
                 <p id="kelvin_feels">but feels like 0K</p>
             </div>
