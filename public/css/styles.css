@@ -1,5 +1,4 @@
 body {
-    background: #666666;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -9,25 +8,24 @@ header {
 }
 
 a {
-    background-color: #808080;
-    color: #eeeeee;
     text-decoration: none;
     padding: 10px 20px 10px 20px;
     border-radius: 10px;
     margin-left: 80px;
     margin-right: 80px;
-    font-size: large;
+    font-size: 14px;
+    border-bottom: 1px solid black;
 }
 
 h1 {
     text-align: center;
-    font-size: xx-large;
+    font-size: 36px;
     margin-top: 40px;
 }
 
 h2 {
     text-align: center;
-    font-size: x-large;
+    font-size: 22px;
     font-style: italic;
     font-weight: 100;
 }
@@ -51,4 +49,69 @@ button {
     font-size: 16px;
     font-weight: bold;
     padding: 5px;
+}
+
+#loading-error {
+    text-align: center;
+}
+
+.main-content {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.temperatures {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.atmosphere_wind {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+}
+
+#location, #description {
+    font-size: 20px;
+    text-align: center;
+}
+
+.temperatures {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.temp_box {
+    border: 1px solid black;
+    padding: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#fahrenheit_temp, #celsius_temp, #kelvin_temp {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#fahrenheit_feels, #celsius_feels, #kelvin_feels {
+    font-size: 18px;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.atmosphere, .wind {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+#humidity, #precipitation, #pressure, #w_speed, #w_degree, #w_direction {
+    border-top: 1px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
 }

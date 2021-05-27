@@ -26,21 +26,21 @@ weatherForm.addEventListener('submit', (e) => {
             if (data.error) {
                 loading_error.textContent = data.error
             } else {
-                location_data.textContent = data.location
-                description.textContent = data.description
+                location_data.textContent = 'Location: ' + data.location
+                description.textContent = 'Description: ' + data.description
                 fahrenheit_temp.textContent = data.fahrenheit_temp
-                fahrenheit_feels.textContent = data.fahrenheit_feels
+                fahrenheit_feels.textContent = 'but feels like: ' + data.fahrenheit_feels
                 celsius_temp.textContent = data.celsius_temp
-                celsius_feels.textContent = data.celsius_feels
+                celsius_feels.textContent = 'but feels like: ' + data.celsius_feels
                 kelvin_temp.textContent = data.kelvin_temp
-                kelvin_feels.textContent = data.kelvin_feels
-                humidity.textContent = data.humidity
-                precipitation.textContent = data.precipitation
-                pressure.textContent = data.pressure
-                w_speed.textContent = data.w_speed
-                w_degree.textContent = data.w_degree
-                w_direction.textContent = data.w_direction
-
+                kelvin_feels.textContent = 'but feels like: ' + data.kelvin_feels
+                humidity.textContent = 'Humidity: ' + data.humidity
+                precipitation.textContent = 'Precipitation: ' + data.precipitation
+                pressure.textContent = 'Pressure: ' + data.pressure
+                w_speed.textContent = 'Wind Speed: ' + data.w_speed
+                w_degree.textContent = 'Wind Degree: ' + data.w_degree
+                w_direction.textContent = 'Wind Direction: ' + data.w_direction
+                console.log('Done updating')
                 loading_error.textContent = ''
             }
         })
