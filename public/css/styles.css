@@ -93,7 +93,7 @@ button {
 }
 
 .temperatures {
-    margin-top: 40px;
+    margin-top: 10px;
     margin-bottom: 40px;
 }
 
@@ -110,6 +110,7 @@ button {
 #fahrenheit_temp, #celsius_temp, #kelvin_temp {
     font-size: 28px;
     font-family: 'Comfortaa', sans-serif;
+    margin-right: 15px;
 }
 
 #fahrenheit_feels, #celsius_feels, #kelvin_feels {
@@ -143,4 +144,17 @@ button {
     height: 75px;
     visibility: hidden;
     border-radius: 15px;
+}
+
+.temp_value_icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.temp_icon {
+    width: 60px;
+    height: 60px;
+    margin-left: 15px;
 }
