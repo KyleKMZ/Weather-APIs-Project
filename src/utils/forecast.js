@@ -13,6 +13,7 @@ const forecast = (latitude, longitude, callback) => {
             // const description = body.current.weather_descriptions[0]
 
             const description = body.current.weather_descriptions[0]
+            const description_img_src = body.current.weather_icons[0]
             const fahrenheit_temp = body.current.temperature
             const fahrenheit_feels = body.current.feelslike
             const celsius_temp = Math.round((fahrenheit_temp - 32) * (5/9))
@@ -28,6 +29,7 @@ const forecast = (latitude, longitude, callback) => {
 
             callback(undefined, {
                 description: description,
+                description_img_src: description_img_src,
                 fahrenheit_temp: fahrenheit_temp,
                 fahrenheit_feels: fahrenheit_feels,
                 celsius_temp: celsius_temp,

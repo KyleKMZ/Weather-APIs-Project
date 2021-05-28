@@ -3,6 +3,7 @@ const search = document.querySelector('input')
 const loading_error = document.querySelector('#loading-error')
 const location_data = document.querySelector('#location')
 const description = document.querySelector('#description')
+const description_img = document.querySelector('#description_img')
 const fahrenheit_temp = document.querySelector('#fahrenheit_temp')
 const fahrenheit_feels = document.querySelector('#fahrenheit_feels')
 const celsius_temp = document.querySelector('#celsius_temp')
@@ -29,6 +30,8 @@ weatherForm.addEventListener('submit', (e) => {
             } else {
                 location_data.textContent = 'Location: ' + data.location
                 description.textContent = 'Description: ' + data.description
+                description_img.src = data.description_img_src
+                description_img.style.visibility = 'visible'
                 fahrenheit_temp.textContent = data.fahrenheit_temp + 'F'
                 fahrenheit_feels.textContent = 'and feels like: ' + data.fahrenheit_feels + 'F'
                 celsius_temp.textContent = data.celsius_temp + 'C'

@@ -137,3 +137,10 @@ button {
     font-family: 'Alegreya Sans', sans-serif;
     font-size: 18px;
 }
+
+#description_img {
+    width: 75px;
+    height: 75px;
+    visibility: hidden;
+    border-radius: 15px;
+}
