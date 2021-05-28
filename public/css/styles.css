@@ -64,7 +64,6 @@ button {
 
 .main-content {
     text-align: center;
-    margin-top: 30px;
 }
 
 .temperatures {
@@ -78,6 +77,10 @@ button {
     flex-direction: row;
     justify-content: center;
     text-align: left;
+}
+
+#location {
+    padding-top: 20px;
 }
 
 #location, #description {
@@ -122,7 +125,7 @@ button {
 }
 
 .atmosphere_wind {
-    margin-bottom: 40px;
+    padding-bottom: 40px;
 }
 
 .atmosphere, .wind {
@@ -131,10 +134,7 @@ button {
 }
 
 #humidity, #precipitation, #pressure, #w_speed, #w_degree, #w_direction {
-    border-top: 1px solid black;
-    border-bottom: 2px solid black;
-    border-radius: 10px;
-    padding: 10px;
+
     font-family: 'Alegreya Sans', sans-serif;
     font-size: 18px;
 }
@@ -157,4 +157,23 @@ button {
     width: 60px;
     height: 60px;
     margin-left: 15px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    border-top: 1px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.info_icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
 }
