@@ -79,10 +79,6 @@ button {
     text-align: left;
 }
 
-#location {
-    padding-top: 20px;
-}
-
 #location, #description {
     font-size: 20px;
     text-align: center;
@@ -142,7 +138,6 @@ button {
 #description_img {
     width: 75px;
     height: 75px;
-    visibility: hidden;
     border-radius: 15px;
 }
 
