@@ -15,10 +15,10 @@ const forecast = (latitude, longitude, callback) => {
             const description = body.current.weather_descriptions[0]
             const fahrenheit_temp = body.current.temperature
             const fahrenheit_feels = body.current.feelslike
-            const celsius_temp = (fahrenheit_temp - 32) * (5/9)
-            const celsius_feels = (fahrenheit_feels - 32) * (5/9)
-            const kelvin_temp = celsius_temp + 273.15
-            const kelvin_feels = celsius_feels + 273.15
+            const celsius_temp = Math.round((fahrenheit_temp - 32) * (5/9))
+            const celsius_feels = Math.round((fahrenheit_feels - 32) * (5/9))
+            const kelvin_temp = Math.round(celsius_temp + 273.15)
+            const kelvin_feels = Math.round(celsius_feels + 273.15)
             const humidity = body.current.humidity
             const precipitation = body.current.precip
             const pressure = body.current.pressure
